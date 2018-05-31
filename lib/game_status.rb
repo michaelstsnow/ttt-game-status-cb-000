@@ -63,10 +63,14 @@ def over?(board)
 end
 
 def winner(board)
+  #This shcekc to see if there is a winner and if so it returns who that winner is
   if over?(board)
+    #first check to see if the game is over
     if draw?(board)
+      # if it is over see if the game is in a draw or not
       return nil
     else
+      #If the game is over and not in a draw than check to find the winning letter
       winning_combo = won?(board)
       board[winning_combo[0]]
     end
